@@ -19,7 +19,7 @@ By integrating Smart Lock into your android app, you can automatically sign user
            	
         implementation 'com.devdigital:smartlock:1.0.0'
         
-- Then initialize it in onCreate() Method of application class :
+- Then initialize it in onCreate() Method of activity class :
             	
         public class LoginActivity extends AppCompatActivity implements SmartLockManager.CredentialListener {
             //Declare SmartLockManager filed
