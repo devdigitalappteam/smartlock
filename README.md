@@ -19,6 +19,11 @@ By integrating Smart Lock into your android app, you can automatically sign user
            	
         implementation 'com.devdigital:smartlock:1.0.0'
         
+- Check below badge for latest gradle version
+
+     [ ![Download](https://api.bintray.com/packages/devdigitalappteam/maven/SmartLock/images/download.svg) ](https://bintray.com/devdigitalappteam/maven/SmartLock/_latestVersion)
+
+        
 - Then initialize it in onCreate() Method of activity class :
             	
         public class LoginActivity extends AppCompatActivity implements SmartLockManager.CredentialListener {
