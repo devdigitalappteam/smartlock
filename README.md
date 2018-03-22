@@ -5,9 +5,9 @@
 By integrating Smart Lock into your android app, you can automatically sign users in to your app using the credentials they have saved.
 
 ## About SmartLock Library
- - Google—or, more specifically, Chrome—has had a makeshift password manager for a while now. You’ve probably seen it before: any time you enter a password into a site, Chrome will ask if you want to save that password for later. this feature was little more than a slightly fancier version of saying “Keep me logged in” on web sites.
+ - Google or, more specifically, Chrome has had a makeshift password manager for a while now. You’ve probably seen it before: any time you enter a password into a site, Chrome will ask if you want to save that password for later. this feature was little more than a slightly fancier version of saying “Keep me logged in” on web sites.
 
- - Now, the whole system has been upgraded and rolled into Google’s Smart Lock feature. If that name sounds familiar, it’s probably because you’ve used it on your Android phone.
+ - Now, the whole system has been upgraded and rolled into Google’s Smart Lock feature. If that name sounds familiar, it’s probably because you’ve used it on your Android(Oreo) phone.
 
 ## Why use SmartLock Library?
 - Integrate Smart Lock for Passwords into your app by using the Credentials API to retrieve saved credentials on sign-in. Use successfully retrieved credentials to sign the user in, or use the Credentials API to rapidly on-board new users by partially completing your app's sign in or sign up form. Prompt users after sign-in or sign-up to store their credentials for future automatic authentication.
@@ -45,7 +45,6 @@ By integrating Smart Lock into your android app, you can automatically sign user
                 mPasswordLockManager.saveCredentials(getString(R.string.app_name), email, password);
             }
         
-        	
             @Override
             protected void onActivityResult(int requestCode, int resultCode, Intent data) {
                 super.onActivityResult(requestCode, resultCode, data);
