@@ -22,34 +22,35 @@ By integrating Smart Lock into your android app, you can automatically sign user
 - Then initialize it in onCreate() Method of activity class :
             	
         public class LoginActivity extends AppCompatActivity implements SmartLockManager.CredentialListener {
-            //Declare SmartLockManager filed
-            private SmartLockManager mPasswordLockManager;
+            
+            //Declare SmartLockManager instance
+            private SmartLockManager mSmartLockManager;
 
             @Override
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                
                 //Initialize SmartLockManager
-                mPasswordLockManager = new SmartLockManager(this);
-                mPasswordLockManager.setCredentialListener(this);
+                mSmartLockManager = new SmartLockManager(this);
+                mSmartLockManager.setCredentialListener(this);
 
-                //Retrieve Credential
-                mPasswordLockManager.getCredentialsAsync();	
+                //Retrieve Credential, Upon Successfull retrival onCredential method will e
+                mSmartLockManager.getCredentialsAsync();	
             }
         
             private void onLoginButtonClick() {
-                String email = ...
-                String password = ...
+                String email = mEmailEt.getText().toString();
+                String password = mPasswordEt.getText().toString();
 
                 //Save new credential
-                mPasswordLockManager.saveCredentials(getString(R.string.app_name), email, password);
+                mSmartLockManager.saveCredentials(getString(R.string.app_name), email, password);
             }
         
             @Override
             protected void onActivityResult(int requestCode, int resultCode, Intent data) {
                 super.onActivityResult(requestCode, resultCode, data);
                 //Call onActivityResult to handle Retrieve/Save credential result 
-                mPasswordLockManager.onActivityResult(requestCode, resultCode, data);
+                mSmartLockManager.onActivityResult(requestCode, resultCode, data);
             }
         
             @Override
